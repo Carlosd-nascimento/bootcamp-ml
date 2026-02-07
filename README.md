@@ -1,1 +1,1 @@
-# Bootcamp AVANTI 🤖📊
+# Bootcamp AVANTI - Machine Learning 🤖📊
