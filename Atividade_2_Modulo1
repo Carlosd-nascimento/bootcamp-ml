@@ -65,3 +65,7 @@ lista_pessoas = [
     ("Bruno", 20)
     ]
 print(f"Nomes em ordem alfabética: {ordem_alfabetica(lista_pessoas)}")
+
+
+
+print(f"Nomes em ordem alfabética: {ordem_alfabetica(lista_pessoas)}")
