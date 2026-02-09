@@ -1,0 +1,67 @@
+#Questão 1 - Função que retorna números ímpares de uma lista
+def num_impar(lista_numeros):
+  impares = [] 
+  for numero in lista_numeros: 
+      if numero % 2 != 0:
+          impares.append(numero) 
+  return impares 
+lista_numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15] 
+resultado_impar = num_impar(lista_numeros) 
+print(f"números ímpares: {resultado_impar}") 
+
+#Questão 2 - Função que retorna números primos
+def num_primos(lista_numeros):
+    primos = []
+    for numero in lista_numeros:
+        if numero > 1:
+            eh_primo = True
+            for i in range(2, int(numero ** 0.5) + 1):
+                if numero % i == 0:
+                    eh_primo = False
+                    break
+            if eh_primo:
+                primos.append(numero)
+    return primos
+resultado_primo = num_primos(lista_numeros)
+print(f"números primos: {resultado_primo}")
+
+#Questão 3 - Elementos presentes em apenas uma das listas
+def unicos(lista1, lista2):
+    resultado = []
+    for item in lista1:
+        if item not in lista2:
+            resultado.append(item)
+    for item in lista2:
+        if item not in lista1:
+            resultado.append(item)
+    return resultado
+
+lista1 = [1, 2, 3, 4, 5, 6, 7]
+lista2 = [3, 4, 5, 6, 7, 8, 9]
+resultado = unicos(lista1,lista2)
+print(f"Valores unicos das Listas: {resultado}")
+
+#Questão 4 - Segundo maior valor da lista inteiro
+def segundo_maior(lista_num1):
+    maior = max(lista_num1)
+    lista_sem_maior = [x for x in lista_num1 if x != maior]
+    
+    if not lista_sem_maior:
+        return None  # não existe segundo maior
+    
+    return max(lista_sem_maior)
+lista_num1 = [10, 20, 5, 30, 25]
+resultado_segundo_maior = segundo_maior(lista_num1)
+print(f"Segundo maior valor: {resultado_segundo_maior}")
+
+
+#Questão 5 - Ordenar lista de tuplas (nome, idade) pelo nome
+def ordem_alfabetica(pessoas):
+    return sorted(pessoas)
+lista_pessoas = [
+    ("Daniela", 28),
+    ("Carlos", 30),
+    ("Ana", 25),
+    ("Bruno", 20)
+    ]
+print(f"Nomes em ordem alfabética: {ordem_alfabetica(lista_pessoas)}")
