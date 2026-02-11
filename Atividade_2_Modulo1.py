@@ -45,9 +45,8 @@ print(f"Valores unicos das Listas: {resultado}")
 def segundo_maior(lista_num1):
     maior = max(lista_num1)
     lista_sem_maior = [x for x in lista_num1 if x != maior]
-    
     if not lista_sem_maior:
-        return None  # não existe segundo maior
+        return None  #retorna "None" se todos os valores forem iguais
     
     return max(lista_sem_maior)
 lista_num1 = [10, 20, 5, 30, 25]

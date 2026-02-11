@@ -69,4 +69,4 @@ print(info_age)
 #O código "df[df['idade'] <= 30]" cria um novo DataFrame que contém apenas as linhas do DataFrame original onde a coluna 'idade' tem valores menor ou iguais a 30.
 #________________________________________________________________________________________________________________________#
 
-#Questão 10 - 
+#Questão 10 -
