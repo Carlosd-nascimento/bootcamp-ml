@@ -7,7 +7,8 @@ def num_impar(lista_numeros):
   return impares 
 lista_numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15] 
 resultado_impar = num_impar(lista_numeros) 
-print(f"números ímpares: {resultado_impar}") 
+print(f"números ímpares: {resultado_impar}")
+#________________________________________________________________________________________________________________________#
 
 #Questão 2 - Função que retorna números primos
 def num_primos(lista_numeros):
@@ -24,6 +25,7 @@ def num_primos(lista_numeros):
     return primos
 resultado_primo = num_primos(lista_numeros)
 print(f"números primos: {resultado_primo}")
+#________________________________________________________________________________________________________________________#
 
 #Questão 3 - Elementos presentes em apenas uma das listas
 def unicos(lista1, lista2):
@@ -40,6 +42,7 @@ lista1 = [1, 2, 3, 4, 5, 6, 7]
 lista2 = [3, 4, 5, 6, 7, 8, 9]
 resultado = unicos(lista1,lista2)
 print(f"Valores unicos das Listas: {resultado}")
+#________________________________________________________________________________________________________________________#
 
 #Questão 4 - Segundo maior valor da lista inteiro
 def segundo_maior(lista_num1):
@@ -52,7 +55,7 @@ def segundo_maior(lista_num1):
 lista_num1 = [10, 20, 5, 30, 25]
 resultado_segundo_maior = segundo_maior(lista_num1)
 print(f"Segundo maior valor: {resultado_segundo_maior}")
-
+#________________________________________________________________________________________________________________________#
 
 #Questão 5 - Ordenar lista de tuplas (nome, idade) pelo nome
 def ordem_alfabetica(pessoas):
@@ -64,3 +67,4 @@ lista_pessoas = [
     ("Bruno", 20)
     ]
 print(f"Nomes em ordem alfabética: {ordem_alfabetica(lista_pessoas)}")
+#________________________________________________________________________________________________________________________#

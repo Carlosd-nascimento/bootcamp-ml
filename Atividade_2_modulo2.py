@@ -1,11 +1,10 @@
 #Questão 6 - Como identificar e tratar outliers
-import pandas as pd
+import pandas as pd #Importando a biblioteca pandas para manipulação de dados
 
-df_dados = pd.Series([15, 16, 14, 15, 17, 16, 15, 14, 300, -50, 16, 15])
+df_dados = pd.Series([15, 16, 14, 15, 17, 16, 15, 14, 300, -50, 16, 15]) #Criando uma Series com os dados fornecidos
 
 media = df_dados.mean()
 desvio = df_dados.std()
-
 limite_inferior = media - 2 * desvio
 limite_superior = media + 2 * desvio
 
@@ -19,7 +18,6 @@ print(f"Outliers método STD: {outliers.tolist()}")
 Q1 = df_dados.quantile(0.25)
 Q3 = df_dados.quantile(0.75)
 IQR = Q3 - Q1
-
 limite_inferior = Q1 - 1.5 * IQR
 limite_superior = Q3 + 1.5 * IQR
 
@@ -53,12 +51,13 @@ print(f"\nDataFrame concatenado por colunas: \n{df_colunas}")
 
 #Questão 8 - leitura de um arquivo CSV em um DataFrame e exibindo as primeiras linhas
 import gdown #Biblioteca para baixar arquivos do Google Drive usando o ID do arquivo.
+
 file_id = "1LPIaskunX9MEvcUQ-9JcnEjcKGiMdZFf"
 gdown.download(id=file_id, output="dados.csv", quiet=True)
 
 df = pd.read_csv("dados.csv") 
 df.head()
-print(f"\nExibindo as primeiras linhas do DataFrame: \n{df.head()}")
+print(f"\nExibindo as primeiras linhas do DataFrame: \n{df.head()}") #Foi utilizado o print pois ao utilizar abaixo o filtro de idade, o resultado do head() não é exibido, e o print exibe as primeiras linhas do DataFrame. 
 #A função pd.read_csv() é usada para ler um arquivo CSV e criar um DataFrame a partir dos dados contidos no arquivo.
 #O método .head() é utilizado para exibir as primeiras linhas do DataFrame, o Default é mostrar as 5 primeiras linhas,
 #mas podemos especificar o número de linhas a serem exibidas, por exemplo, df.head(10) para mostrar as 10 primeiras linhas.
@@ -68,6 +67,7 @@ print(f"\nExibindo as primeiras linhas do DataFrame: \n{df.head()}")
 info_age = df[df['idade'] <= 30]
 print(f"Coluna idade com o filtro: {info_age}")
 #O código "df[df['idade'] <= 30]" cria um novo DataFrame que contém apenas as linhas do DataFrame original onde a coluna 'idade' tem valores menor ou iguais a 30.
+#Esse filtro cria um conjunto booleano que apresenta True e False para cada linha, assim filtrando quem tem idade menor ou igual a 30 e exibindo apenas onde a condição é verdadeira(True).
 #________________________________________________________________________________________________________________________#
 
-#Questão 10 -
+#Questão 10 - 
