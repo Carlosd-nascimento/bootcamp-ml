@@ -58,6 +58,7 @@ gdown.download(id=file_id, output="dados.csv", quiet=True)
 
 df = pd.read_csv("dados.csv") 
 df.head()
+print(f"\nExibindo as primeiras linhas do DataFrame: \n{df.head()}")
 #A função pd.read_csv() é usada para ler um arquivo CSV e criar um DataFrame a partir dos dados contidos no arquivo.
 #O método .head() é utilizado para exibir as primeiras linhas do DataFrame, o Default é mostrar as 5 primeiras linhas,
 #mas podemos especificar o número de linhas a serem exibidas, por exemplo, df.head(10) para mostrar as 10 primeiras linhas.
@@ -65,7 +66,7 @@ df.head()
 
 #Questão 9 - Filtrar um DataFrame com base em uma condição específica
 info_age = df[df['idade'] <= 30]
-print(info_age)
+print(f"Coluna idade com o filtro: {info_age}")
 #O código "df[df['idade'] <= 30]" cria um novo DataFrame que contém apenas as linhas do DataFrame original onde a coluna 'idade' tem valores menor ou iguais a 30.
 #________________________________________________________________________________________________________________________#
 
