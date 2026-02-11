@@ -70,4 +70,21 @@ print(f"Coluna idade com o filtro: {info_age}")
 #Esse filtro cria um conjunto booleano que apresenta True e False para cada linha, assim filtrando quem tem idade menor ou igual a 30 e exibindo apenas onde a condição é verdadeira(True).
 #________________________________________________________________________________________________________________________#
 
-#Questão 10 - 
+#Questão 10 - Como lidar com valores ausentes (NaN) em um DataFrame?
+import numpy as np
+data = {
+    'A': [1, 2, np.nan, 4],
+    'B': [np.nan, 2, 3, 4],
+    'C': [1, np.nan, np.nan, 4]
+    }
+df_nan = pd.DataFrame(data)
+
+print(f"\nDataFrame original com valores NaN: \n{df_nan}")
+df_dropna = df_nan.dropna()
+print(f"\nDataFrame após remover linhas com NaN: \n{df_dropna}")
+df_fillna = df_nan.fillna(df_nan.mean())
+print(f"\nDataFrame após substituir NaN pela média da coluna: \n{df_fillna}")
+#O método dropna() remove todas as linhas que contêm pelo menos um valor NaN
+#E o método fillna() foi usado para substituir os valores NaN por um valor especificado, neste caso, a média da coluna.
+#Essas são duas abordagens comuns para lidar com valores ausentes em um DataFrame usando pandas.
+#________________________________________________________________________________________________________________________#
